@@ -3,12 +3,27 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <BrowserRouter>
+  <div className="fact-text">
+    <div className="a-header">
+        <input type="checkbox" name="main-nav" id="main-nav" className="burger-check" />
+        <label htmlFor="main-nav" className="burger menu"><span></span></label>
+        <ul>
+            <li><Link as={Link} to="/page1"  > Page 1</Link></li>
+            <li><Link as={Link} to="/page2"  > Page 2</Link></li>
+            <li><Link as={Link} to="/page3"  > Page 3</Link></li>
+        </ul>
+    </div>
+  </div>
     <App />
-  </React.StrictMode>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

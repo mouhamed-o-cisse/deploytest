@@ -11,3 +11,245 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.in{
+  position: relative;
+  z-index: 99;
+
+  padding: 0.1% 2% 0.1% 0.1%;
+
+  /*font-family: "Roboto", sans-serif;*/
+  font-size: 1rem;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.445);
+  cursor: pointer;
+
+}
+
+/* This help me to control the vr mode button */
+.a-enter-vr-button {
+  background: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20245.82%20141.73%22%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill%3A%23fff%3Bfill-rule%3Aevenodd%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Ctitle%3Emask%3C%2Ftitle%3E%3Cpath%20class%3D%22a%22%20d%3D%22M175.56%2C111.37c-22.52%2C0-40.77-18.84-40.77-42.07S153%2C27.24%2C175.56%2C27.24s40.77%2C18.84%2C40.77%2C42.07S198.08%2C111.37%2C175.56%2C111.37ZM26.84%2C69.31c0-23.23%2C18.25-42.07%2C40.77-42.07s40.77%2C18.84%2C40.77%2C42.07-18.26%2C42.07-40.77%2C42.07S26.84%2C92.54%2C26.84%2C69.31ZM27.27%2C0C11.54%2C0%2C0%2C12.34%2C0%2C28.58V110.9c0%2C16.24%2C11.54%2C30.83%2C27.27%2C30.83H99.57c2.17%2C0%2C4.19-1.83%2C5.4-3.7L116.47%2C118a8%2C8%2C0%2C0%2C1%2C12.52-.18l11.51%2C20.34c1.2%2C1.86%2C3.22%2C3.61%2C5.39%2C3.61h72.29c15.74%2C0%2C27.63-14.6%2C27.63-30.83V28.58C245.82%2C12.34%2C233.93%2C0%2C218.19%2C0H27.27Z%22%2F%3E%3C%2Fsvg%3E) 50% 50%/70% 70% no-repeat rgba(0,0,0,.35);
+  border: 0;
+  bottom: 0;
+  cursor: pointer;
+  display: none;
+  min-width: 50px;
+  min-height: 30px;
+  padding-right: 5%;
+  padding-top: 4%;
+  position: relative;
+  right: 0;
+  margin: 50px 100px 0 0;
+  transition: background-color .05s ease;
+  -webkit-transition: background-color .05s ease;
+  z-index: 9999;
+}
+
+.fact-text {
+  position: relative;
+  z-index: 99;
+
+  padding: 0.1% 2% 0.1% 0.1%;
+
+  /*font-family: "Roboto", sans-serif;*/
+  font-size: 1rem;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.445);
+  cursor: pointer;
+}
+
+/*==============================================================================
+ General Styles
+==============================================================================*/
+h1,
+div,
+.boo {
+        position: relative;
+        float: left;
+        width: calc(100% - 0px);
+        text-align: center;
+        /* margin: 20px 0 0 0; */
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        color: #333;
+}
+
+/*--------------------------------------
+ Animation Magic, animations won't occur
+ on IE9 and before and Opera Mini
+--------------------------------------*/
+*,
+*:before,
+*:after {
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        box-sizing: border-box;
+}
+
+/*==============================================================================
+ The burger icon with it's animation. Uses the checked property of a checkbox
+ in order to make the animation happen as well as control the next elements
+ I've used classes because of the + css selector, which will only ever animate
+ the next label element. Does not work on IE8 or below and opera mini since
+ they don't support the :checked selector.
+==============================================================================*/
+.burger-check {
+  display: none;
+}
+
+/*--------------------------------------
+Sets the actionable area for the burger
+including a label for usability
+--------------------------------------*/
+.burger {
+  position: relative;
+  float: right;
+  margin-left: 10px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.burger:after {
+/* This is where was the menu */
+  /* content: 'Menu'; */
+  position: absolute;
+  bottom: 7px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+}
+
+/*--------------------------------------
+Creates the look of the burger icon
+using the inner span and pseudo-elements
+--------------------------------------*/
+.burger span,
+.burger span:before,
+.burger span:after {
+  position: absolute;
+  left: 10px;
+  top: 22px;
+  width: 40px;
+  height: 4px;
+  background: #333;
+  border-radius: 0.2em;
+}
+
+/* Reset the left and create the pseudo-element */
+.burger span:before,
+.burger span:after {
+  content: '';
+  left: 0;
+}
+
+/* Top bar position */
+.burger span:before {
+  top: -8px;
+}
+
+/* Bottom bar position */
+.burger span:after {
+  top: 8px;
+}
+
+/* Get rid of more on action (IE9 or higher) */
+.burger-check:checked + .burger:after {
+  content: '';
+}
+/* Get rid of the middle bar on action (IE9 or higher) */
+
+.burger-check:checked + .burger span {
+  height: 0;
+  width: 0;
+}
+
+/* Moves the top and bottom bars to the middle on action (IE9 or higher) */
+.burger-check:checked + .burger span:before,
+.burger-check:checked + .burger span:after {
+  top: 6px;
+}
+
+/* Rotates the top bar on action with full browser support (IE9 or higher) */
+.burger-check:checked + .burger span:before {
+  -webkit-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+/* Rotates the bottom bar on action with full browser support (IE9 or higher) */
+.burger-check:checked + .burger span:after {
+  -webkit-transform: rotate(-225deg);
+  -ms-transform: rotate(225deg);
+  transform: rotate(-225deg);
+}
+
+/*==============================================================================
+ Simple reveal (IE9 or higher)
+==============================================================================*/
+span.boo {
+  width: auto;
+  margin-top: 0;
+  line-height: 60px;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Reveals Boo! (IE9 or higher) */
+#main-nav-test:checked ~ .boo {
+  height: 50px;
+}
+
+/*==============================================================================
+Simple mobile menu opening and closing (IE9 or higher)
+==============================================================================*/
+.a-header {
+  position: relative;
+  float: left;
+  /* width: calc(100% - 0px); */
+  margin: 10px 0 0 0 ;
+  min-height: 50px;
+  /* background: #eee; */
+  overflow: hidden;
+}
+
+.a-header ul {
+  position: relative;
+  float: left;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.a-header ul a {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 0;
+  line-height: 50px;
+  padding: 0 15px;
+  text-decoration: none;
+  overflow: hidden;
+  color: #333;
+  text-align: left;
+}
+
+.a-header ul a:hover,
+.a-header ul a:active,
+.a-header ul a:focus,
+.a-header ul a:visited {
+  text-decoration: none;
+  background: #fff;
+  border-bottom-color: #08c;
+}
+
+/* Animate height of 'a' element in order to reveal the menu on check (IE9 or higher) */
+#main-nav:checked ~ ul a {
+  height: 50px;
+}
+
+.div a-scene a-image :hover {
+  cursor: pointer;
+}
