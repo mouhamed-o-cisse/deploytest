@@ -10,7 +10,9 @@ class Page1 extends Component {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         >
-         <a-scene vr-mode-ui="enabled: true" cursor="rayOrigin: mouse" raycaster="objects:[clickable]" zoom='2'>
+         <a-scene vr-mode-ui="enabled: true" cursor="rayOrigin: mouse" raycaster="objects:[clickable]" 
+         device-orientation-permission-ui="enabled: true; denyButtonText: '333'"
+         >
           <a-sky src={require('./beach.jpg')} />
           <a-camera visible="true" wasd-controls="enabled: false; easing: 10; acceleration: 75; fly: false;"
           cursor="rayOrigin: mouse;" raycaster="objects: .clickable" zoom="0.5" 
