@@ -11,7 +11,15 @@ class Page1 extends Component {
         exit={{ opacity: 0 }}
         >
          <a-scene vr-mode-ui="enabled: true" cursor="rayOrigin: mouse" raycaster="objects:[clickable]" 
-         device-orientation-permission-ui="enabled: true; denyButtonText: '333'"
+         device-orientation-permission-ui="
+         enabled: true; 
+         denyButtonText: Ne pas activer; 
+         allowButtonText: Activer ; 
+         cancelButtonText: Fermer ; 
+         deviceMotionMessage: Ce site immersif nécessite l'accès aux capteurs de mouvement de votre appareil ;
+         mobileDesktopMessage: Ce site immersif nécessite l'accès aux capteurs de mouvement de votre appareil;
+         httpsMessage: Accéder à ce site via HTTPS pour passer en mode VR et accorder l'accès aux capteurs de l'appareil;
+         "
          >
           <a-sky src={require('./beach.jpg')} />
           <a-camera visible="true" wasd-controls="enabled: false; easing: 10; acceleration: 75; fly: false;"
