@@ -9,6 +9,7 @@ import {AnimatePresence} from 'framer-motion'
 import Page1 from './Page1';
 import Page2 from './Page2';
 import Page3 from './Page3';
+import Pagetest from './Pagetest';
 
 function AnimatedRoutes (){
     const location = useLocation();
@@ -27,6 +28,7 @@ function AnimatedRoutes (){
         <Route path='/page1' element={<Page1 />} />
         <Route path='/page2' element={<Page2 />} />
         <Route path='/page3' element={<Page3 />} />
+        <Route path='/pagetest' element={<Pagetest />} />
   
         </Routes>
         </AnimatePresence>

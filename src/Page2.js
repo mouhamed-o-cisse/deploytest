@@ -9,13 +9,17 @@ class Page1 extends Component {
       initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
       >
         <a-scene vr-mode-ui="enabled: true" cursor="rayOrigin: mouse" raycaster="objects:[clickable]" zoom='2'>
-          {/* <a-sky src={require('./beach.jpg')} /> */}
-          <a-sky src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1669929194/VR%20media/beach_pwtwqr.jpg' />
-          <a-camera visible="true" wasd-controls="enabled: false; easing: 10; acceleration: 75; fly: false;"
+          <a-sky src={require('./bedroom.jpeg')} />
+          {/* <a-sky src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1669929194/VR%20media/beach_pwtwqr.jpg' /> */}
+          {/* <a-camera visible="true" wasd-controls="enabled: false; easing: 10; acceleration: 75; fly: false;"
           cursor="rayOrigin: mouse;" raycaster="objects: .clickable" zoom="0.5" 
           animation="property: zoom; to: 1; dur: 3000; easing: linear; elasticity: 400; delay: 1000; dir: normal; loop: false;"
+          ></a-camera> */}
+          <a-camera visible="true" wasd-controls="enabled: false; easing: 10; acceleration: 75; fly: false;"
+          cursor="rayOrigin: mouse;" raycaster="objects: .clickable" zoom="1" 
           ></a-camera>
           <a-text color="black" position="0 2.25 -5" value="It's me brother page 3" ></a-text>
            {/* link="href :page1;"  */}

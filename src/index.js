@@ -4,24 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import Header from './Header';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-  <div className="fact-text">
-    <div className="a-header">
-        <input type="checkbox" name="main-nav" id="main-nav" className="burger-check" />
-        <label htmlFor="main-nav" className="burger menu"><span></span></label>
-        <ul>
-            <li><Link as={Link} to="/page1"  > Page 1</Link></li>
-            <li><Link as={Link} to="/page2"  > Page 2</Link></li>
-            <li><Link as={Link} to="/page3"  > Page 3</Link></li>
-        </ul>
-    </div>
-  </div>
+  <Header />
     <App />
   </BrowserRouter>
 );

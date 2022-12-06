@@ -75,11 +75,12 @@ code {
   z-index: 99;
 
   padding: 0.1% 2% 0.1% 0.1%;
+  margin: 10px 20px;
 
   /*font-family: "Roboto", sans-serif;*/
   font-size: 1rem;
   text-align: right;
-  background: rgba(255, 255, 255, 0.445);
+  /* background: rgba(255, 255, 255, 0.445); */
   cursor: pointer;
 }
 
@@ -90,13 +91,15 @@ h1,
 div,
 .boo {
         position: relative;
-        float: left;
-        width: calc(100% - 0px);
+        float: right;
+        /* width: calc(100% - 50px); */
+        width: 300px;
         text-align: center;
         /* margin: 20px 0 0 0; */
         font-family: 'Raleway', sans-serif;
         font-weight: 400;
-        color: #333;
+        /* color: #333; */
+        /* background-color: aqua; */
 }
 
 /*--------------------------------------
@@ -106,8 +109,8 @@ div,
 *,
 *:before,
 *:after {
-        -webkit-transition: all 0.3s;
-        transition: all 0.3s;
+        -webkit-transition: all 0.8s;
+        transition: all 0.8s;
         box-sizing: border-box;
 }
 
@@ -144,6 +147,7 @@ including a label for usability
   width: 100%;
   text-align: center;
   font-size: 13px;
+  /* background-color: bisque; */
 }
 
 /*--------------------------------------
@@ -245,7 +249,21 @@ Simple mobile menu opening and closing (IE9 or higher)
   width: 100%;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 10px;
+  /* background-color: rgba(194, 152, 96, 0); */
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* .a-header ul:hover{
+  background-color: rgba(185, 127, 51, 0.795);
+} */
+
+
+/* The animation code */
+@keyframes example {
+  from {background: red;}
+  to {background: yellow;}
 }
 
 .a-header ul a {
@@ -257,17 +275,47 @@ Simple mobile menu opening and closing (IE9 or higher)
   padding: 0 15px;
   text-decoration: none;
   overflow: hidden;
-  color: #333;
-  text-align: left;
+  color: rgb(51, 47, 47);
+  text-align: center;
+  margin: 5px 0;
+  border-radius: 10px;
+  background-color: rgb(245, 215, 215);
+  transition: 1s;
+  right: 0;
+  top: 0;
 }
 
-.a-header ul a:hover,
-.a-header ul a:active,
-.a-header ul a:focus,
-.a-header ul a:visited {
+.a-header ul a:active{
   text-decoration: none;
-  background: #fff;
+  background: rgb(36, 127, 139);
   border-bottom-color: #08c;
+}
+
+.a-header ul a:hover{
+  text-decoration: none;
+  background: rgb(92, 197, 211);
+  border-bottom-color: #08c;
+  right: 10px;
+  top: -3px;
+  /* animation-timing-function: ease;
+  animation-name: example;
+  animation-duration: 4s; */
+
+}
+
+/* .a-header ul a:visited {
+  text-decoration: none;
+  background: rgb(116, 132, 134);
+  border-bottom-color: #08c;
+} */
+
+
+.a-header ul a:focus {
+  text-decoration: none;
+  background: rgb(92, 197, 211);
+  border-bottom-color: #08c;
+  right: 10px;
+  top: -3px;
 }
 
 /* Animate height of 'a' element in order to reveal the menu on check (IE9 or higher) */
