@@ -41,8 +41,8 @@ function Page1 () {
         transition={{ duration: 0.5 }}
       >
       <a-scene vr-mode-ui="enabled: true" cursor="rayOrigin: mouse" raycaster="objects:[clickable]">
-          <a-sky src={require('./street.jpeg')} />
-          {/* <a-sky src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1669929194/VR%20media/beach_pwtwqr.jpg' /> */}
+          {/* <a-sky src={require('./street.jpeg')} /> */}
+          <a-sky src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1670418125/VR%20media/street_y2o58g.jpg' />
           {/* <a-camera visible="true" wasd-controls="enabled: false; easing: 10; acceleration: 75; fly: false;"
           cursor="rayOrigin: mouse;" raycaster="objects: .clickable" zoom="0.5" 
           animation="property: zoom; to: 1; dur: 3000; easing: linear; elasticity: 400; delay: 1000; dir: normal; loop: false;"
