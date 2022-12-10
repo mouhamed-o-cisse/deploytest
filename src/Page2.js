@@ -19,7 +19,7 @@ function Page1 () {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <a-scene vr-mode-ui="enabled: true" cursor="rayOrigin: mouse" raycaster="objects:[clickable]" zoom='2'>
+        <a-scene vr-mode-ui="enabled: true" cursor="rayOrigin: mouse" raycaster="objects:[clickable]" >
           <a-sky src={require('./bedroom.jpeg')} />
           {/* <a-sky src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1669929194/VR%20media/beach_pwtwqr.jpg' /> */}
           {/* <a-camera visible="true" wasd-controls="enabled: false; easing: 10; acceleration: 75; fly: false;"

@@ -112,7 +112,7 @@ function Page1 () {
          "
          >
 
-          <a-box id="redbox" log="Hello, Box!"></a-box>
+          
 
 
           <a-sky src={require('./beach.jpg')} />
