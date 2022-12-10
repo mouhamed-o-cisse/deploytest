@@ -1,6 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import 'aframe'
 import { motion } from 'framer-motion';
+
+import { useNavigate } from 'react-router-dom';
+
+// import e from 'express';
 // import { Link } from 'react-router-dom';
 // import { AFRAME } from 'aframe';
 
@@ -19,10 +23,15 @@ import { motion } from 'framer-motion';
 //   console.log('click')
 // }
 
+function Page1 () {
 
-class Page1 extends Component {
+  const navigate = useNavigate();
+
+    function goPage1(){
+      navigate('/page1')
+  }
   
-  render () {
+  // render () {
    
     return (
       <motion.div className='div'
@@ -43,7 +52,7 @@ class Page1 extends Component {
           ></a-camera>
           <a-text color="black" position="0 2.25 -5" value="It's me brother page 1" ></a-text>
            {/* link="href :page1;"  */}
-           <a-image id="tery" clickable position="0 1.25 -5" scale="1.5 1.5 1.5" link="href :page1;"
+           <a-image id="tery" clickable position="0 1.25 -5" scale="1.5 1.5 1.5" onClick={goPage1}
           src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1669929144/VR%20media/marker_rhmqkc.png'
           animation="property: scale; to: 2 2 2; dur: 2000; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: false;"/>
 
@@ -52,7 +61,7 @@ class Page1 extends Component {
       </a-scene>
       </motion.div>
     );
-  }
+  // }
 }
 
 export default Page1;

@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import 'aframe'
 import { motion } from 'framer-motion';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 // import { useEffect } from 'react';
 
 
-class Page1 extends Component {
 
-  render () {
+function Page1 () {
+ 
+
+  // render () {
 
     // function thr (){
     //   const navigate = useNavigate();
@@ -83,6 +85,13 @@ class Page1 extends Component {
     //   console.log('clikìcked')
     // }
 
+    const navigate = useNavigate();
+
+    function goPage2(){
+      navigate('/page2')
+  }
+
+ 
 
     return (
         <motion.div 
@@ -118,20 +127,20 @@ class Page1 extends Component {
           <a-text color="black" position="0 2.25 -5" value="It's me brother page 2"></a-text>
 
            {/* link="href :page1;" src={require('./marker.png')} */}
-          <a-image  clickable position="0 1.25 -5" scale="1.5 1.5 1.5"
+          <a-image  clickable position="0 1.25 -5" scale="1.5 1.5 1.5"  onClick={goPage2}
           src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1669929144/VR%20media/marker_rhmqkc.png'
           animation="property: scale; to: 2 2 2; dur: 2000; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: false;"/>
 
-          <a-image foo2 id="etc" clickable position="2 1.25 -5" scale="1.5 1.5 1.5"
+          {/* <a-image foo2 id="etc" clickable position="2 1.25 -5" scale="1.5 1.5 1.5"
           src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1669929144/VR%20media/marker_rhmqkc.png'
-          animation="property: scale; to: 2 2 2; dur: 2000; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: false;"/>
+          animation="property: scale; to: 2 2 2; dur: 2000; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: false;"/> */}
           {/* idea: make the page zoom from 0.5 to 1 */}
           
         </a-scene>
         </motion.div>
       
     );
-  }
+  // }
 }
 
 export default Page1;
