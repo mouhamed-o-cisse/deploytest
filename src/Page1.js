@@ -102,7 +102,7 @@ function Page1 () {
         >
          <a-scene vr-mode-ui="enabled: true" cursor="rayOrigin: mouse" raycaster="objects:[clickable]" 
          device-orientation-permission-ui="
-         enabled: false; 
+         enabled: true; 
          denyButtonText: Ne pas activer; 
          allowButtonText: Activer ; 
          cancelButtonText: Fermer ; 
