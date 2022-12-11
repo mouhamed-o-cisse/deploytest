@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 function Page1 () {
-  // render () {
+
     const navigate = useNavigate();
 
     function goPage3(){
@@ -14,34 +14,30 @@ function Page1 () {
 
     return (
       <motion.div
-      initial={{ opacity: 0 }}
+        initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <a-scene vr-mode-ui="enabled: true" cursor="rayOrigin: mouse" raycaster="objects:[clickable]" >
-          {/* <a-sky src={require('./bedroom.jpeg')} /> */}
-          <a-sky src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1670418123/VR%20media/bedroom_ylochs.jpg' />
-          {/* <a-camera visible="true" wasd-controls="enabled: false; easing: 10; acceleration: 75; fly: false;"
-          cursor="rayOrigin: mouse;" raycaster="objects: .clickable" zoom="0.5" 
-          animation="property: zoom; to: 1; dur: 3000; easing: linear; elasticity: 400; delay: 1000; dir: normal; loop: false;"
-          ></a-camera> */}
-          <a-camera visible="true" wasd-controls="enabled: false; easing: 10; acceleration: 75; fly: false;"
-          cursor="rayOrigin: mouse;" raycaster="objects: .clickable" zoom="1" 
-          ></a-camera>
-          <a-text color="black" position="0 2.25 -5" value="It's me brother page 3" ></a-text>
-           {/* link="href :page1;"  */}
-          <a-image id="tery" clickable position="0 1.25 -5" scale="1.5 1.5 1.5" onClick={goPage3}
-          src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1669929144/VR%20media/marker_rhmqkc.png'
-          animation="property: scale; to: 2 2 2; dur: 2000; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: false;"/>
+        transition={{ duration: 2 }}>
 
-          {/* idea: make the page zoom from 0.5 to 1 */}
+         {/* vr-mode-ui="enabled: true" */}
+          <a-scene cursor="rayOrigin: mouse" raycaster="objects:[clickable]" >
+
+            {/* <a-sky src={require('./bedroom.jpeg')} /> */}
+            <a-sky src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1670418123/VR%20media/bedroom_ylochs.jpg' />
           
-      </a-scene>
+            {/* idea: make the page zoom from 0.5 to 1 */}
+            <a-camera visible="true" wasd-controls="enabled: false; easing: 10; acceleration: 75; fly: false;"
+            cursor="rayOrigin: mouse;" raycaster="objects: .clickable" zoom="1" />
+
+            <a-text color="black" position="0 2.25 -5" value="It's me brother page 3" />
+
+            <a-image id="tery" clickable position="0 1.25 -5" scale="1.5 1.5 1.5" onClick={goPage3}
+            src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1669929144/VR%20media/marker_rhmqkc.png'
+            animation="property: scale; to: 2 2 2; dur: 2000; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: false;"/>
+          
+          </a-scene>
       </motion.div>
-      
     );
-  // }
 }
 
 export default Page1;
