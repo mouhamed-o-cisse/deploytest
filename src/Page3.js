@@ -3,7 +3,7 @@ import 'aframe'
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
-function Page1 () {
+function Page3 () {
 
   const navigate = useNavigate();
 
@@ -12,7 +12,7 @@ function Page1 () {
   }
    
     return (
-      <motion.div className='div'
+      <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -21,8 +21,8 @@ function Page1 () {
           {/* vr-mode-ui="enabled: true" */}
           <a-scene cursor="rayOrigin: mouse" raycaster="objects:[clickable]">
 
-            {/* <a-sky src={require('./street.jpeg')} /> */}
-            <a-sky src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1670418125/VR%20media/street_y2o58g.jpg' />
+            <a-sky src={require('./images/street.jpeg')} />
+            {/* <a-sky src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1670418125/VR%20media/street_y2o58g.jpg' /> */}
 
             {/* idea: make the page zoom from 0.5 to 1 */}
             <a-camera visible="true" wasd-controls="enabled: false; easing: 10; acceleration: 75; fly: false;"
@@ -35,8 +35,9 @@ function Page1 () {
             animation="property: scale; to: 2 2 2; dur: 2000; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: false;"/>
 
           </a-scene>
+
       </motion.div>
     );
 }
 
-export default Page1;
+export default Page3;

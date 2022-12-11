@@ -9,6 +9,7 @@ import {AnimatePresence} from 'framer-motion'
 import Page1 from './Page1';
 import Page2 from './Page2';
 import Page3 from './Page3';
+import HomePage from './HomePage';
 
 
 function AnimatedRoutes (){
@@ -19,12 +20,12 @@ function AnimatedRoutes (){
         <Routes location={location} key={location.pathname}>
 
         {/* ESSENTIALS */}
-        <Route path='/' element={<Navigate replace to='/accueil' />} />
-        <Route path='/accueil' element={<Page1 />} />
+        <Route path='/' element={<Navigate replace to='/home' />} />
         {/* <Route path='/not-found' element={<NotFoundPage />} /> */}
         {/* <Route path='*' element={<NotFoundPage />} /> */}
   
         {/* Pages routes  */}
+        <Route path='/home' element={<HomePage />} />
         <Route path='/page1' element={<Page1 />} />
         <Route path='/page2' element={<Page2 />} />
         <Route path='/page3' element={<Page3 />} />
