@@ -30,8 +30,8 @@ function Page1 () {
               httpsMessage: Accéder à ce site via HTTPS pour passer en mode VR et accorder l'accès aux capteurs de l'appareil;" >
 
             
-                <a-sky src={require('./images/beach.jpg')} />
-                {/* <a-sky src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1669929194/VR%20media/beach_pwtwqr.jpg' /> */}
+                {/* <a-sky src={require('./images/beach.jpg')} /> */}
+                <a-sky src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1669929194/VR%20media/beach_pwtwqr.jpg' />
 
                 <a-camera visible="true" wasd-controls="enabled: false; easing: 10; acceleration: 75; fly: false;"
                 cursor="rayOrigin: mouse;" raycaster="objects: .clickable" zoom="1" />

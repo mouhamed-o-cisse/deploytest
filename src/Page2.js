@@ -21,8 +21,8 @@ function Page2 () {
          {/* vr-mode-ui="enabled: true" */}
           <a-scene cursor="rayOrigin: mouse" raycaster="objects:[clickable]" >
 
-            <a-sky src={require('./images/bedroom.jpeg')} />
-            {/* <a-sky src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1670418123/VR%20media/bedroom_ylochs.jpg' /> */}
+            {/* <a-sky src={require('./images/bedroom.jpeg')} /> */}
+            <a-sky src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1670418123/VR%20media/bedroom_ylochs.jpg' />
           
             {/* idea: make the page zoom from 0.5 to 1 */}
             <a-camera visible="true" wasd-controls="enabled: false; easing: 10; acceleration: 75; fly: false;"

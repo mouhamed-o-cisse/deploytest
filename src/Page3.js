@@ -21,8 +21,8 @@ function Page3 () {
           {/* vr-mode-ui="enabled: true" */}
           <a-scene cursor="rayOrigin: mouse" raycaster="objects:[clickable]">
 
-            <a-sky src={require('./images/street.jpeg')} />
-            {/* <a-sky src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1670418125/VR%20media/street_y2o58g.jpg' /> */}
+            {/* <a-sky src={require('./images/street.jpeg')} /> */}
+            <a-sky src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1670418125/VR%20media/street_y2o58g.jpg' />
 
             {/* idea: make the page zoom from 0.5 to 1 */}
             <a-camera visible="true" wasd-controls="enabled: false; easing: 10; acceleration: 75; fly: false;"
