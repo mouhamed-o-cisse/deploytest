@@ -24,7 +24,7 @@ function HomePage () {
 
            <h1>Bienvenue dans l'espace virtuelle ...</h1>
            
-           <p>Vous etes sur le point de vivre une experience immersive unique</p>
+           <p>Vous êtes sur le point de vivre une expérience immersive unique...</p>
 
            <button className='link' onClick={goPage2} >Commencer</button>
 
