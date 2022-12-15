@@ -27,7 +27,8 @@ function Page1 () {
               cancelButtonText: Fermer ; 
               deviceMotionMessage: Ce site immersif nécessite l'accès aux capteurs de mouvement de votre appareil ;
               mobileDesktopMessage: Ce site immersif nécessite l'accès aux capteurs de mouvement de votre appareil;
-              httpsMessage: Accéder à ce site via HTTPS pour passer en mode VR et accorder l'accès aux capteurs de l'appareil;" >
+              httpsMessage: Accéder à ce site via HTTPS pour passer en mode VR et accorder l'accès aux capteurs de l'appareil;"
+              >
 
             
                 {/* <a-sky src={require('./images/beach.jpg')} /> */}

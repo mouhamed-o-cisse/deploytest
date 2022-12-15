@@ -22,7 +22,7 @@ function HomePage () {
 
          <div className='subcon'>
 
-           <h1>Bienvenue dans l'espace virtuelle Sablux</h1>
+           <h1>Bienvenue dans l'espace virtuelle ...</h1>
            
            <p>Vous etes sur le point de vivre une experience immersive unique</p>
 

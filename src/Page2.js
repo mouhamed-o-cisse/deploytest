@@ -19,7 +19,16 @@ function Page2 () {
         transition={{ duration: 2 }}>
 
          {/* vr-mode-ui="enabled: true" */}
-          <a-scene cursor="rayOrigin: mouse" raycaster="objects:[clickable]" >
+          <a-scene cursor="rayOrigin: mouse" raycaster="objects:[clickable]"
+            device-orientation-permission-ui="
+            enabled: true; 
+            denyButtonText: Ne pas activer; 
+            allowButtonText: Activer ; 
+            cancelButtonText: Fermer ; 
+            deviceMotionMessage: Ce site immersif nécessite l'accès aux capteurs de mouvement de votre appareil ;
+            mobileDesktopMessage: Ce site immersif nécessite l'accès aux capteurs de mouvement de votre appareil;
+            httpsMessage: Accéder à ce site via HTTPS pour passer en mode VR et accorder l'accès aux capteurs de l'appareil;"
+          >
 
             {/* <a-sky src={require('./images/bedroom.jpeg')} /> */}
             <a-sky src='https://res.cloudinary.com/mouhamedscloud/image/upload/v1670418123/VR%20media/bedroom_ylochs.jpg' />
