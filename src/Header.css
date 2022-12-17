@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,700&display=swap');
+
+
 .fact-text {
   position: relative;
   float: right;
-  width: 300px;
+  width: 100%;
   z-index: 99;
   padding: 0;
   margin: 10px 20px;
@@ -160,32 +163,41 @@ span.boo {
 Simple mobile menu opening and closing (IE9 or higher)
 ==============================================================================*/
 .a-header {
-  position: relative;
-  float: right;
-  /* width: calc(100% - 0px); */
-  width: 300px;
+  /* position: relative; */
+  /* float: right; */
+  width: 100%;
   margin: 10px 0 0 0 ;
-  min-height: 50px;
+  min-height: 500px;
+  /* max-height: 550px; */
   /* background: #eee; */
   overflow: hidden;
-  display: flex;
-  flex-direction: row-reverse;
+  /* display: flex;
+  flex-direction: row-reverse; */
+}
+
+.ulblock{
+  height: 100%;
+  position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%,-50%);
 }
 
 .a-header ul {
-  position: relative;
+  /* position: relative; */
   /* top: 0;
   bottom: 50px;
   right: 0; */
-
-  float: right;
-  width: 100%;
+  /* float: center; */
+  width: 300px;
   list-style: none;
   margin: 0;
   padding: 10px;
-  /* background-color: rgba(194, 152, 96, 0); */
+  background-color: rgba(194, 152, 96, 0);
   border-radius: 5px;
   overflow: hidden;
+  font-family: 'Crimson Text', serif;
+  letter-spacing: 3px;
 }
 
 /* .a-header ul:hover{
@@ -205,20 +217,21 @@ Simple mobile menu opening and closing (IE9 or higher)
   width: 100%;
   height: 0;
   line-height: 50px;
-  padding: 0 15px;
-  text-decoration: none;
   overflow: hidden;
   color: rgb(51, 47, 47);
   text-align: center;
-  margin: 5px 0;
-  border-radius: 10px;
-  background-color: rgb(245, 215, 215);
+  background-color: rgb(54, 35, 35);
   transition: 1s;
   right: 0;
   top: 0;
 }
 
-.a-header ul a:active{
+.a-header ul a span{
+  text-decoration: underline;
+  color: rgb(7, 148, 148);
+}
+
+/* .a-header ul a:active{
   text-decoration: none;
   background: rgb(36, 127, 139);
   border-bottom-color: #08c;
@@ -230,25 +243,24 @@ Simple mobile menu opening and closing (IE9 or higher)
   border-bottom-color: #08c;
   right: 10px;
   top: -3px;
-  /* animation-timing-function: ease;
+
+} */
+ /* animation-timing-function: ease;
   animation-name: example;
   animation-duration: 4s; */
-
-}
-
 /* .a-header ul a:visited {
   text-decoration: none;
   background: rgb(116, 132, 134);
   border-bottom-color: #08c;
 } */
 
-.a-header ul a:focus {
+/* .a-header ul a:focus {
   text-decoration: none;
   background: rgb(92, 197, 211);
   border-bottom-color: #08c;
   right: 10px;
   top: -3px;
-}
+} */
 
 /* Animate height of 'a' element in order to reveal the menu on check (IE9 or higher) */
 #main-nav:checked ~ ul a {

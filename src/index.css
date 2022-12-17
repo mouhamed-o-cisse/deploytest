@@ -6,31 +6,62 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-color: aquamarine; */
-  background: url('./images/bedroom.jpeg') ;
+  /* background: url('./images/desktop-1280x800.png') ; */
 }
 @media (max-width: 319px) {
   body {
-    background: url('./images/400hp.png') ;
+    background: url('./images/mobileimg-320x900.png') ;
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
   body {
-    background: url('./images/400hp.png') ;
+    background: url('./images/mobile1-480x960.png') ;
   }
 }
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 624px) {
   body {
-    background: url('./images/1080hp.jpeg') ;
+    background: url('./images/mobile2-624x960.png') ;
   }
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 625px) and (max-width: 767px) {
   body {
-    background: url('./images/1080hp.jpeg') ;
+    background: url('./images/tablet1-768x1024.png') ;
   }
 }
-@media (min-width: 1023px) and (max-width: 1280px) {
+@media (min-width: 768px) and (max-width: 895px) {
   body {
-    background: url('./images/1080hp.jpeg') ;
+    
+    background: url('./images/tablet2-895x1024.png') ;
+  }
+}
+@media (min-width: 896px) and (max-width: 1023px) {
+  body {
+    background: url('./images/desktop-1024x1500.png') ;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1151px) {
+  body {
+    background: url('./images/desktop-1151x800.png') ;
+  }
+}
+@media (min-width: 1151px) and (max-width: 1280px) {
+  body {
+    background: url('./images/desktop-1280x800.png') ;
+  }
+}
+@media (min-width: 1281px) and (max-width: 1400px) {
+  body {
+    background: url('./images/desktop-1400x900.png') ;
+  }
+}
+@media (min-width: 1400px) and (max-width: 1520px) {
+  body {
+    background: url('./images/desktop-1520x1000.png') ;
+  }
+}
+@media (min-width: 1400px) {
+  body {
+    background: url('./images/desktop-1520x1000.png') ;
   }
 }
 code {
